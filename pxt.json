@@ -1,0 +1,21 @@
+{
+    "name": "Microbit_Voice2",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "startbit": "github:45717335/startbit#0d4df5c81a6cf4d1d28aa5512153d09a297d97d5"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
