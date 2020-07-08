@@ -8,32 +8,57 @@ function LED_5_5 (数字: number, 数字2: number) {
     }
 }
 function show_v3 (数字: number) {
-    if (数字 < v1 + Set_W && 数字 > v1 - Set_W) {
+    if (C1 == 1 && (数字 < v1 + Set_W && 数字 > v1 - Set_W)) {
         l1 = l1 + Set_L * 1
         v1 = v1 + (数字 - v1) / l1
-    } else if (数字 < v2 + Set_W && 数字 > v2 - Set_W) {
+        C2 = 0
+        C3 = 0
+        C4 = 0
+        C5 = 0
+    } else if (C2 == 1 && (数字 < v2 + Set_W && 数字 > v2 - Set_W)) {
         l2 = l2 + Set_L * 1
         v2 = v2 + (数字 - v2) / l2
-    } else if (数字 < v3 + Set_W && 数字 > v3 - Set_W) {
+        C1 = 0
+        C3 = 0
+        C4 = 0
+        C5 = 0
+    } else if (C3 == 1 && (0 < v3 + Set_W && 0 > v3 - Set_W)) {
         l3 = l3 + Set_L * 1
         v3 = v3 + (数字 - v3) / l3
-    } else if (数字 < v4 + Set_W && 数字 > v4 - Set_W) {
+        C1 = 0
+        C2 = 0
+        C4 = 0
+        C5 = 0
+    } else if (C4 == 1 && (0 < v4 + Set_W && 0 > v4 - Set_W)) {
         l4 = l4 + Set_L * 1
         v4 = v4 + (数字 - v4) / l4
-    } else if (数字 < v5 + Set_W && 数字 > v5 - Set_W) {
+        C1 = 0
+        C2 = 0
+        C3 = 0
+        C5 = 0
+    } else if (C5 == 1 && (0 < v5 + Set_W && 0 > v5 - Set_W)) {
         l5 = l5 + Set_L * 1
         v5 = v5 + (数字 - v5) / l5
+        C1 = 0
+        C2 = 0
+        C3 = 0
+        C4 = 0
     } else {
         if (v1 == 0) {
             v1 = 数字
+            C1 = 1
         } else if (v2 == 0) {
             v2 = 数字
+            C2 = 1
         } else if (v3 == 0) {
             v3 = 数字
+            C3 = 1
         } else if (v4 == 0) {
             v4 = 数字
+            C4 = 1
         } else if (v5 == 0) {
             v5 = 数字
+            C5 = 1
         }
     }
     basic.clearScreen()
@@ -146,6 +171,11 @@ input.onButtonPressed(Button.B, function () {
     }
     startbit.startbit_showLight()
 })
+let C5 = 0
+let C4 = 0
+let C3 = 0
+let C2 = 0
+let C1 = 0
 let set_set = 0
 let v5 = 0
 let v4 = 0
@@ -178,7 +208,12 @@ l4 = 0
 l5 = 0
 v4 = 0
 v5 = 0
-set_set = 1.1
+set_set = 0
+C1 = 0
+C2 = 0
+C3 = 0
+C4 = 0
+C5 = 0
 basic.forever(function () {
     show_v3(startbit.startbit_getSoundVolume())
 })
