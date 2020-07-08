@@ -10,19 +10,19 @@ function LED_5_5 (数字: number, 数字2: number) {
 function show_v3 (数字: number) {
     if (数字 < v1 + Set_W && 数字 > v1 - Set_W) {
         l1 = l1 + Set_L * 1
-        v1 = v1 + (数字 - v1) / Set_M
+        v1 = v1 + (数字 - v1) / l1
     } else if (数字 < v2 + Set_W && 数字 > v2 - Set_W) {
         l2 = l2 + Set_L * 1
-        v2 = v2 + (数字 - v2) / Set_M
+        v2 = v2 + (数字 - v2) / l2
     } else if (数字 < v3 + Set_W && 数字 > v3 - Set_W) {
         l3 = l3 + Set_L * 1
-        v3 = v3 + (数字 - v3) / Set_M
+        v3 = v3 + (数字 - v3) / l3
     } else if (数字 < v4 + Set_W && 数字 > v4 - Set_W) {
         l4 = l4 + Set_L * 1
-        v4 = v4 + (数字 - v4) / Set_M
+        v4 = v4 + (数字 - v4) / l4
     } else if (数字 < v5 + Set_W && 数字 > v5 - Set_W) {
         l5 = l5 + Set_L * 1
-        v5 = v5 + (数字 - v5) / Set_M
+        v5 = v5 + (数字 - v5) / l5
     } else {
         if (v1 == 0) {
             v1 = 数字
